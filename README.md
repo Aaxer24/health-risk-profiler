@@ -1,5 +1,3 @@
-Absolutely! Here's a **complete, polished `README.md`** tailored for your **Health Risk Profiler** project. You can directly save this as `README.md` in your project root.
-
 ```markdown
 # Health Risk Profiler API
 
@@ -203,3 +201,4 @@ You can test endpoints using:
 * [OpenAI API](https://platform.openai.com/docs/)
 
 ```
+
