@@ -1,4 +1,5 @@
 ```markdown
+2. **Create and activate a virtual environment**
 # Health Risk Profiler API
 
 ## Overview
@@ -23,15 +24,15 @@ The **Health Risk Profiler** is an AI-powered service that analyzes lifestyle su
 health-risk-profiler/
 │
 ├── app/
-│   ├── **init**.py            # empty
-│   ├── config.py              # environment variables
-│   ├── genai_processor.py     # AI risk analysis
-│   ├── ocr_parser.py          # OCR / text parsing
-│   ├── routes.py              # API endpoints
-│   └── schemas.py             # Pydantic models
+│   ├── **init**.py            
+│   ├── config.py              
+│   ├── genai_processor.py     
+│   ├── ocr_parser.py          
+│   ├── routes.py              
+│   └── schemas.py            
 │
-├── main.py                    # FastAPI entrypoint
-├── requirements.txt           # Python dependencies
+├── main.py                    
+├── requirements.txt        
 ├── .gitignore
 └── README.md
 
@@ -201,3 +202,4 @@ You can test endpoints using:
 
 If you want, I can also **write a few more sample curl commands with different text/image inputs** ready for your submission. Do you want me to do that?
 ```
+
