@@ -1,4 +1,7 @@
 # main.py
+import warnings
+warnings.filterwarnings("ignore", message=".*pin_memory.*")
+
 from fastapi import FastAPI
 from app.routes import router
 

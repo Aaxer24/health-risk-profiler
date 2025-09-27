@@ -4,7 +4,7 @@ from langchain.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 import os
 import json
-from collections import OrderedDict  # ✅ added for ordering
+from collections import OrderedDict  
 
 # Load environment variable
 load_dotenv()
@@ -56,7 +56,7 @@ def analyze_health_risk(parsed):
 
     # Generate risk assessment using GPT
     messages = risk_prompt.format_prompt(answers=answers).to_messages()
-    response = chat_model(messages)
+    response = chat_model.invoke(messages)
 
     # Parse GPT response safely
     try:

@@ -131,7 +131,7 @@ def extract_fields_with_gpt(text: str):
         fields=", ".join(SURVEY_KEYS)
     ).to_messages()
 
-    response = chat_model(messages)
+    response = chat_model.invoke(messages)
 
     # Convert GPT response to dictionary safely
     try:
