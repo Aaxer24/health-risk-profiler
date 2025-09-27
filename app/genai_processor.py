@@ -4,6 +4,7 @@ from langchain.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 import os
 import json
+from collections import OrderedDict  # ✅ added for ordering
 
 # Load environment variable
 load_dotenv()
@@ -48,9 +49,9 @@ def analyze_health_risk(parsed):
     missing_count = sum(1 for v in answers.values() if v is None)
     if total_fields > 0 and missing_count / total_fields >= 0.5:
         return {
+            "answers": answers,  # ✅ answers always first
             "status": "incomplete_profile",
-            "reason": ">50% fields missing",
-            "answers": answers
+            "reason": ">50% fields missing"
         }
 
     # Generate risk assessment using GPT
@@ -70,8 +71,13 @@ def analyze_health_risk(parsed):
             "recommendations": []
         }
 
-    # Merge answers and ensure 'status'
-    risk_data["answers"] = answers
+    # Ensure 'status'
     risk_data.setdefault("status", "ok")
 
-    return risk_data
+    ordered = OrderedDict()
+    ordered["answers"] = answers
+    for k, v in risk_data.items():
+        if k != "answers":
+            ordered[k] = v
+
+    return ordered
