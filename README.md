@@ -198,7 +198,5 @@ You can test endpoints using:
 
 ```
 
-If you want, I can also **write a few more sample curl commands with different text/image inputs** ready for your submission. Do you want me to do that?
-```
 
 
