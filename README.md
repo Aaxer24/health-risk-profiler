@@ -42,22 +42,21 @@ health-risk-profiler/
 ## Setup Instructions
 
 1. **Clone the repository**
-```bash
+```cmd
 git clone https://github.com/Aaxer24/health-risk-profiler.git
 cd health-risk-profiler
 ````
 
 2. **Create and activate a virtual environment**
 
-```bash
+```cmd
 python -m venv venv
-venv\Scripts\activate     # Windows
-# source venv/bin/activate # macOS/Linux
+venv\Scripts\activate
 ```
 
 3. **Install dependencies**
 
-```bash
+```cmd
 pip install -r requirements.txt
 ```
 
@@ -70,13 +69,13 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 5. **Run the FastAPI server**
 
-```bash
+```cmd
 uvicorn main:app --reload
 ```
 
 6. **Optional:** Expose locally with ngrok for sharing/demo
 
-```bash
+```cmd
 ngrok http 8000
 ```
 
@@ -94,11 +93,10 @@ ngrok http 8000
 text=age: 42 smoker: yes exercise: rarely diet: high sugar alcohol: no sleep: 7
 ```
 
-**Sample `curl` request:**
+**Sample Command Prompt `curl` request:**
 
-```bash
-curl -X POST "http://127.0.0.1:8000/analyze_text" \
--F "text=age: 42 smoker: yes exercise: rarely diet: high sugar alcohol: no sleep: 7"
+```cmd
+curl -X POST "http://127.0.0.1:8000/analyze_text" -F "text=age: 42 smoker: yes exercise: rarely diet: high sugar alcohol: no sleep: 7"
 ```
 
 **Sample Response:**
@@ -132,11 +130,10 @@ curl -X POST "http://127.0.0.1:8000/analyze_text" \
 
 * Upload an image file containing survey answers (scanned form, screenshot, etc.)
 
-**Sample `curl` request:**
+**Sample Command Prompt `curl` request:**
 
-```bash
-curl -X POST "http://127.0.0.1:8000/analyze_image" \
--F "file=@handwritten_form.png"
+```cmd
+curl -X POST "http://127.0.0.1:8000/analyze_image" -F "file=@D:/Plum/health-risk-profiler/data/handwritten_image.png"
 ```
 
 **Sample Response:** Same JSON structure as above.
@@ -202,3 +199,5 @@ You can test endpoints using:
 
 ```
 
+If you want, I can also **write a few more sample curl commands with different text/image inputs** ready for your submission. Do you want me to do that?
+```
