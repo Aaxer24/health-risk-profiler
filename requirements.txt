@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+pillow
+regex
+easyocr
+langchain
+langchain_openai
+langchain_community
+python-dotenv
