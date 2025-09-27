@@ -1,5 +1,3 @@
-```markdown
-2. **Create and activate a virtual environment**
 # Health Risk Profiler API
 
 ## Overview
@@ -202,4 +200,5 @@ You can test endpoints using:
 
 If you want, I can also **write a few more sample curl commands with different text/image inputs** ready for your submission. Do you want me to do that?
 ```
+
 
